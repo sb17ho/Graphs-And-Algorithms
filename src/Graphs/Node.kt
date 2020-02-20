@@ -1,6 +1,6 @@
 package Graphs
 
-class Node(value: Char, visited: Boolean?) {
-    var vertex: Char = value
+class Node(value: Int, visited: Boolean?) {
+    var vertex: Int = value
     var visited: Boolean? = visited
 }
