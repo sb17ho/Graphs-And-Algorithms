@@ -1,9 +1,11 @@
 package Graphs
 
-fun main(args: Array<String>){
-    var graph: Graph = Graph(4)
-    graph.DFSGraph()
-//    graph.print()
-    graph.printList()
+fun main(args: Array<String>) {
+//    val graph: DFSGraph = DFSGraph(5)
+//    graph.DFSGraph()
+//    graph.printList()
+
+    val graph2: BFSGraph = BFSGraph(5)
+    graph2.BFSGraph()
 }
 

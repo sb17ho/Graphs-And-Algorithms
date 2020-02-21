@@ -2,10 +2,10 @@ package Graphs
 
 import java.util.*
 
-class DFSGraph(vertices: Int) {
-    val matrix: LinkedList<LinkedList<Node>> = LinkedList()
-    var size: Int = vertices
+class BFSGraph(vertices: Int) {
     var visited: Set<Int> = emptySet()
+    var matrix: LinkedList<LinkedList<Node>> = LinkedList()
+    val size: Int = vertices
 
     init {
         createGraph()
@@ -39,7 +39,7 @@ class DFSGraph(vertices: Int) {
         matrix[4].add(Node(4, null))
     }
 
-    fun DFSGraph() {
+    fun BFSGraph() {
         for (i in 0 until matrix.size) {
             for (j in 0 until matrix[i].size) {
                 if (matrix[i][j].visited == null) {
@@ -51,38 +51,34 @@ class DFSGraph(vertices: Int) {
         for (i in 0 until matrix.size) {
             for (j in 0 until matrix[i].size) {
                 if (matrix[i][j].visited == false && !visited.contains(matrix[i][j].vertex)) {
-                    DFSVertex(i)
+                    BFSVertex(i)
                 }
             }
         }
     }
 
-    fun DFSVertex(vi: Int) {
+    fun BFSVertex(vi: Int) {
+        val vertexQueue: LinkedList<Int> = LinkedList()
         matrix[vi][0].visited = true
-        visited += matrix[vi][0].vertex
-        for (j in 1 until matrix[vi].size) {
-            if (matrix[vi][j].visited == false && !visited.contains(matrix[vi][j].vertex)) {
-                DFSVertex(matrix[vi][j].vertex)
-            }
-        }
-    }
 
-    fun print() {
-        for (i in 0 until matrix.size) {
-            println("Vertex $i")
-            for (j in 0 until matrix[i].size) {
-                println(matrix[i][j].vertex)
-            }
-        }
-    }
+        vertexQueue.add(matrix[vi][0].vertex)
 
-    fun printList() {
-        visited.forEach() {
-            print(" $it ")
+        while (!vertexQueue.isEmpty()) {
+            val vertex: Int = vertexQueue.removeFirst()
+            println(vertex)
+            for (j in 1 until matrix[vertex].size) {
+                if (matrix[vertex][j].visited == false && !visited.contains(matrix[vertex][j].vertex)) {
+                    matrix[vertex][j].visited = true
+
+                    visited += matrix[vertex][j].vertex // might be wrong
+
+                    vertexQueue.add(matrix[vertex][j].vertex)
+                }
+            }
         }
     }
 }
 
-class DFSWeightedGraph() {
+class BFSWeigtedGraph() {
 
 }
