@@ -65,7 +65,7 @@ class BFSGraph(vertices: Int) {
 
         while (!vertexQueue.isEmpty()) {
             val vertex: Int = vertexQueue.removeFirst()
-            println(vertex)
+            print(" $vertex ")
             for (j in 1 until matrix[vertex].size) {
                 if (matrix[vertex][j].visited == false && !visited.contains(matrix[vertex][j].vertex)) {
                     matrix[vertex][j].visited = true
