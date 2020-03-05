@@ -10,9 +10,6 @@ fun main(args: Array<String>) {
 //    println("Breadth First Search")
 //    val graph2: BFSGraph = BFSGraph(5)
 //    graph2.BFSGraph()
-
-//    val collinear: Collinear = Collinear()
-
 //    check()
 }
 
