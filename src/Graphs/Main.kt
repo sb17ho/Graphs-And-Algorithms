@@ -1,16 +1,17 @@
 package Graphs
 
 fun main(args: Array<String>) {
-    println("Depth First Search")
-    val graph: DFSGraph = DFSGraph(8)
-    graph.DFSGraph()
-    graph.printList()
+//    println("Depth First Search")
+//    val graph: DFSGraph = DFSGraph(8)
+//    graph.DFSGraph()
+//    graph.printList()
 
 //    println()
 //    println("Breadth First Search")
 //    val graph2: BFSGraph = BFSGraph(5)
 //    graph2.BFSGraph()
-//    check()
+
+    var kmp: KMP_Matching = KMP_Matching()
 }
 
 fun test(x: Array<Int>, y: Array<Int>){
