@@ -1,8 +1,9 @@
 package Graphs
 
-class Node(value: Int, visited: Boolean?) {
+class Node(value: Int, visited: Boolean?, weight: Int) {
     var vertex: Int = value
     var visited: Boolean? = visited
+    var weight: Int = weight
 }
 
 class Points(x: Int, y: Int) {

@@ -17,51 +17,51 @@ class DFSGraph(vertices: Int) {
             matrix.add(LinkedList())
         }
         //Vertex 0
-        matrix[0].add(Node(0, null)) //At 0,0 first element should be there rather the its adjacent vertex
-        matrix[0].add(Node(1, null))
-        matrix[0].add(Node(2, null))
-        matrix[0].add(Node(5, null))
+        matrix[0].add(Node(0, null, 0)) //At 0,0 first element should be there rather the its adjacent vertex
+        matrix[0].add(Node(1, null, 0))
+        matrix[0].add(Node(2, null, 0))
+        matrix[0].add(Node(5, null,0))
 
         //Vertex 1
-        matrix[1].add(Node(1, null))
-        matrix[1].add(Node(0, null))
-        matrix[1].add(Node(2, null))
-        matrix[1].add(Node(3, null))
-        matrix[1].add(Node(4, null))
+        matrix[1].add(Node(1, null,0))
+        matrix[1].add(Node(0, null,0))
+        matrix[1].add(Node(2, null,0))
+        matrix[1].add(Node(3, null,0))
+        matrix[1].add(Node(4, null,0))
 
         //Vertex 2
-        matrix[2].add(Node(2, null))
-        matrix[2].add(Node(0, null))
-        matrix[2].add(Node(1, null))
-        matrix[2].add(Node(4, null))
+        matrix[2].add(Node(2, null,0))
+        matrix[2].add(Node(0, null,0))
+        matrix[2].add(Node(1, null,0))
+        matrix[2].add(Node(4, null,0))
 //        matrix[2].add(Node(3, null))
 
         //Vertex 3: Out degree zero
-        matrix[3].add(Node(3, null))
-        matrix[3].add(Node(1, null))
-        matrix[3].add(Node(4, null))
+        matrix[3].add(Node(3, null,0))
+        matrix[3].add(Node(1, null,0))
+        matrix[3].add(Node(4, null,0))
 
         //vertex 4
-        matrix[4].add(Node(4, null))
-        matrix[4].add(Node(2, null))
-        matrix[4].add(Node(3, null))
-        matrix[4].add(Node(1, null))
+        matrix[4].add(Node(4, null,0))
+        matrix[4].add(Node(2, null,0))
+        matrix[4].add(Node(3, null,0))
+        matrix[4].add(Node(1, null,0))
 
         //Vertex 5
-        matrix[5].add(Node(5, null))
-        matrix[5].add(Node(0, null))
-        matrix[5].add(Node(6, null))
-        matrix[5].add(Node(7, null))
+        matrix[5].add(Node(5, null,0))
+        matrix[5].add(Node(0, null,0))
+        matrix[5].add(Node(6, null,0))
+        matrix[5].add(Node(7, null,0))
 
         //vertex 6
-        matrix[6].add(Node(6, null))
-        matrix[6].add(Node(5, null))
-        matrix[6].add(Node(7, null))
+        matrix[6].add(Node(6, null,0))
+        matrix[6].add(Node(5, null,0))
+        matrix[6].add(Node(7, null,0))
 
         //Vertex 7
-        matrix[7].add(Node(7, null))
-        matrix[7].add(Node(5, null))
-        matrix[7].add(Node(6, null))
+        matrix[7].add(Node(7, null,0))
+        matrix[7].add(Node(5, null,0))
+        matrix[7].add(Node(6, null,0))
     }
 
     fun DFSGraph() {
